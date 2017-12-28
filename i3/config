@@ -126,7 +126,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+shift+d exec --no-startup-id dmenu_run -b -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=10'
+bindsym $mod+d exec --no-startup-id dmenu_run -b -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=10'
 
 # gmrun
 bindsym mod1+F2 exec --no-startup-id gmrun
@@ -134,7 +134,7 @@ bindsym mod1+F2 exec --no-startup-id gmrun
 # start xfce-appfinder
 bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 
-# start rofi full  -- ROFI IS NOT INSTALLED 
+# start rofi full  -- ROFI IS NOT INSTALLED
 #bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
 
 # start rofi small  -- ROFI IS NOT INSTALLED
@@ -424,7 +424,7 @@ for_window [class="Spotify"] move to workspace 10
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Updater
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 
 # bluetooth
 exec --no-startup-id blueberry-tray
@@ -452,7 +452,7 @@ exec --no-startup-id variety
 exec --no-startup-id xfce4-clipman
 
 #redshift
-exec --no-startup-id redshift-gtk
+exec_always --no-startup-id redshift-gtk &
 
 #Conky
 #exec --no-startup-id conky -c ~/.config/i3/system-overview
@@ -683,10 +683,10 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 #https://github.com/acrisci/playerctl/
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-bindsym XF86AudioStop exec --no-startup-id playerctl stop
+bindsym F6 exec --no-startup-id playerctl play-pause
+bindsym F8 exec --no-startup-id playerctl next
+bindsym F7 exec --no-startup-id playerctl previous
+bindsym F5 exec --no-startup-id playerctl stop
 #bindsym XF86AudioPlay exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 #bindsym XF86AudioNext exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 #bindsym XF86AudioPrev exec --no-startup-id "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
